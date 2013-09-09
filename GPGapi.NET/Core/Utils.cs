@@ -78,28 +78,28 @@ namespace GpgApi
             return s;
         }
 
-        /// <summary>
-        /// Checks whether an image is a jpeg image or not.
-        /// </summary>
-        /// <param name="filename">The name of the image to checks.</param>
-        /// <returns>True if the image is jpeg; otherwise it returns false.</returns>
-        public static Boolean IsJpegImage(String filename)
-        {
-            try
-            {
-                using (Image image = Image.FromFile(filename))
-                {
-                    return image.RawFormat.Equals(ImageFormat.Jpeg);
-                }
-            }
-            catch (OutOfMemoryException)
-            {
-                // Image.FromFile throws an OutOfMemoryException 
-                // if the file does not have a valid image format or
-                // GDI+ does not support the pixel format of the file.
-                return false;
-            }
-        }
+//        /// <summary>
+//        /// Checks whether an image is a jpeg image or not.
+//        /// </summary>
+//        /// <param name="filename">The name of the image to checks.</param>
+//        /// <returns>True if the image is jpeg; otherwise it returns false.</returns>
+//        public static Boolean IsJpegImage(String filename)
+//        {
+//            try
+//            {
+//                using (Image image = Image.FromFile(filename))
+//                {
+//                    return image.RawFormat.Equals(ImageFormat.Jpeg);
+//                }
+//            }
+//            catch (OutOfMemoryException)
+//            {
+//                // Image.FromFile throws an OutOfMemoryException 
+//                // if the file does not have a valid image format or
+//                // GDI+ does not support the pixel format of the file.
+//                return false;
+//            }
+//        }
 
         /// <summary>
         /// Method for converting a UNIX timestamp to a regular

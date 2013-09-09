@@ -77,8 +77,8 @@ namespace GpgApi
             if (!File.Exists(PhotoPath))
                 return new GpgInterfaceResult(GpgInterfaceStatus.Error, GpgInterfaceMessage.FileNotFound);
 
-            if (!Utils.IsJpegImage(PhotoPath))
-                return new GpgInterfaceResult(GpgInterfaceStatus.Error, GpgInterfaceMessage.InvalidImageFormat);
+//            if (!Utils.IsJpegImage(PhotoPath))
+//                return new GpgInterfaceResult(GpgInterfaceStatus.Error, GpgInterfaceMessage.InvalidImageFormat);
 
             return GpgInterfaceResult.Success;
         }
