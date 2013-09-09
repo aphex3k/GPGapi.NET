@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E4861980-F963-4820-AD25-D0DB1A2610C5}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GPGapi.NET</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>GPGapi.NET</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Core\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="GPGInterface\" />
+    <Folder Include="KeyNodes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="Core\AskPassphraseInfo.cs" />
+    <Compile Include="Core\Email.cs" />
+    <Compile Include="Core\Enums.cs" />
+    <Compile Include="Core\FingerPrint.cs" />
+    <Compile Include="Core\GpgConvert.cs" />
+    <Compile Include="Core\GpgDateTime.cs" />
+    <Compile Include="Core\GpgKeyword.cs" />
+    <Compile Include="Core\KeyId.cs" />
+    <Compile Include="Core\Name.cs" />
+    <Compile Include="Core\SecureStringToCharArrayMarshaler.cs" />
+    <Compile Include="Core\Utils.cs" />
+    <Compile Include="Exceptions\GpgApiException.cs" />
+    <Compile Include="Exceptions\GpgInterfaceAlreadyUsed.cs" />
+    <Compile Include="Exceptions\InvalidEmailAddressException.cs" />
+    <Compile Include="Exceptions\InvalidFingerPrintException.cs" />
+    <Compile Include="Exceptions\InvalidKeyIdException.cs" />
+    <Compile Include="Exceptions\InvalidNameException.cs" />
+    <Compile Include="GPGInterface\GpgAddPhoto.cs" />
+    <Compile Include="GPGInterface\GpgAddUserInfo.cs" />
+    <Compile Include="GPGInterface\GpgChangeDisable.cs" />
+    <Compile Include="GPGInterface\GpgChangeExpiration.cs" />
+    <Compile Include="GPGInterface\GpgChangeOwnerTrust.cs" />
+    <Compile Include="GPGInterface\GpgChangePassword.cs" />
+    <Compile Include="GPGInterface\GpgChangePrimaryUserInfo.cs" />
+    <Compile Include="GPGInterface\GpgDecrypt.cs" />
+    <Compile Include="GPGInterface\GpgDeleteKeys.cs" />
+    <Compile Include="GPGInterface\GpgDeleteUserId.cs" />
+    <Compile Include="GPGInterface\GpgEncrypt.cs" />
+    <Compile Include="GPGInterface\GpgEnums.cs" />
+    <Compile Include="GPGInterface\GpgExportKey.cs" />
+    <Compile Include="GPGInterface\GpgGenerateKey.cs" />
+    <Compile Include="GPGInterface\GpgImportKey.cs" />
+    <Compile Include="GPGInterface\GpgInterface.cs" />
+    <Compile Include="GPGInterface\GpgInterfaceResult.cs" />
+    <Compile Include="GPGInterface\GpgListPublicKeys.cs" />
+    <Compile Include="GPGInterface\GpgListSecretKeys.cs" />
+    <Compile Include="GPGInterface\GpgLoadPhoto.cs" />
+    <Compile Include="GPGInterface\GpgSign.cs" />
+    <Compile Include="GPGInterface\GpgVerifySignature.cs" />
+    <Compile Include="GPGInterface\GpgVersion.cs" />
+    <Compile Include="KeyNodes\AbstractKeySignable.cs" />
+    <Compile Include="KeyNodes\Key.cs" />
+    <Compile Include="KeyNodes\KeyPhoto.cs" />
+    <Compile Include="KeyNodes\KeySignature.cs" />
+    <Compile Include="KeyNodes\KeySub.cs" />
+    <Compile Include="KeyNodes\KeyUserInfo.cs" />
+  </ItemGroup>
+</Project>
