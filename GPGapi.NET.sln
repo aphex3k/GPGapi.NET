@@ -3,12 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPGapi.NET.iOS", "GPGapi.NET\GPGapi.NET.iOS.csproj", "{E4861980-F963-4820-AD25-D0DB1A2610C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPGapi.NET.Android", "GPGapi.NET\GPGapi.NET.Android.csproj", "{9EE0FFE6-E198-45C6-8FC5-C9DCC8161B8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EE0FFE6-E198-45C6-8FC5-C9DCC8161B8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE0FFE6-E198-45C6-8FC5-C9DCC8161B8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EE0FFE6-E198-45C6-8FC5-C9DCC8161B8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EE0FFE6-E198-45C6-8FC5-C9DCC8161B8B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E4861980-F963-4820-AD25-D0DB1A2610C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E4861980-F963-4820-AD25-D0DB1A2610C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4861980-F963-4820-AD25-D0DB1A2610C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
